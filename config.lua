@@ -74,6 +74,12 @@ Config.Density = {
     ['scenario'] = 0.6,
 }
 
+Config.Stun = {
+    active = true,
+    min = 3000,
+    max = 5000
+}
+
 Config.Cruise = 'kmp/h'
 Config.IdleCamera = true
 Config.disableHandsupControls = {24, 25, 47, 58, 59, 63, 64, 71, 72, 75, 140, 141, 142, 143, 257, 263, 264}
