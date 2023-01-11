@@ -7,7 +7,6 @@ function WheelBurst()
     local ped = PlayerPedId()
     local inveh = IsPedSittingInAnyVehicle(ped)
     local veh = GetVehiclePedIsUsing(ped)
-    local maxs = GetVehicleMaxSpeed(veh)
     if inveh then
         if (IsVehicleTyreBurst(veh, 0, true) and IsVehicleTyreBurst(veh, 1, true)) or (IsVehicleTyreBurst(veh, 4, true) and IsVehicleTyreBurst(veh, 5, true)) 
         or (IsVehicleTyreBurst(veh, 0, true) and IsVehicleTyreBurst(veh, 4, true)) or (IsVehicleTyreBurst(veh, 1, true) and IsVehicleTyreBurst(veh, 5, true))
@@ -83,19 +82,6 @@ CreateThread(function()
 	end
 end)
 
--- Pistol Whipping
-Citizen.CreateThread(function()
-    while(true)do
-            if globalIsPedArmed then
-                DisableControlAction(1, 140, true)
-                DisableControlAction(1, 141, true)
-                DisableControlAction(1, 142, true)
-            else
-                Citizen.Wait(100)
-            end
-        Citizen.Wait(0)
-    end
-end)
 
 -- Accidental Punching
 Citizen.CreateThread(function()
