@@ -76,8 +76,8 @@ Config.Density = {
 
 Config.Stun = {
     active = true,
-    min = 4000,
-    max = 7000
+    min = 3000,
+    max = 5000
 }
 
 Config.Cruise = 'kmp/h'
